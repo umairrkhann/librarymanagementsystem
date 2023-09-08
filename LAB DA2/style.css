@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c6b6b3;
+
+    color: #FFC26F;
+}
+
+a {
+    color: #765827;
+    text-decoration: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #EAC696;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header p {
+    color: #765827;
+    font-weight: bolder;
+}
+
+/* Container Styles */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Book Styles */
+.book {
+    float: left;
+    width: 30%;
+    padding: 1%;
+    box-sizing: border-box;
+    background-color: #C8AE7D;
+    border: 1px solid #65451F;
+    margin: 1rem;
+     color: #765827;
+     display: flex;
+     justify-content: center; 
+}
+
+.book img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #65451F;
+    color: #fff;
+}
+
+/* Heading Styles */
+.heading {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: #65451F;
+}
+
+.heading::after {
+    content: "";
+    display: block;
+    width: 50%;
+    margin: 0.5rem auto 0;
+    /* border-bottom: 3px solid #65451F; */
+}
+
+.genre {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #65451F;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book-sm {
+    width: 30%;
+    margin: 1%;
+    padding: 1%;
+    box-sizing: border-box;
+    background-color: #884A39;
+    border: 1px solid #65451F;
+}
+
+.book-sm img {
+
+    width: 70%;
+    margin: auto;
+    display: block;
+}
+.book-details p{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #65451F;
+    
+}
+.book-details img{
+    justify-content: center !important;
+}
+.tik{
+    
+    margin: auto;
+    display: block;
+    width: 70%;
+}
+/* NAVIGATION BAR */
+
+
+.navbar{
+    color: wheat;
+    background-color: #65451F !important;
+}
+.navbar a{
+    color: wheat !important;
+}

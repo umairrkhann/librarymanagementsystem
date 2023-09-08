@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E4E4D0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #94A684;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 4px;
+            margin-bottom: 15px;
+            border: 1px solid #AEC3AE;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #FFEEF4;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="loginForm" onsubmit="return validateForm()" action="index.html" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Login">
+        </form>
+        <p><a href="#" onclick="forgotPassword()">Forgot Password?</a></p>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Get the input values
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            // Check if the username and password match (replace with your validation logic)
+            if (username === "arpit" && password === "123") {
+                localStorage.setItem("userValue", username);
+                alert("Login successful!");
+                window.location.href = "index.html";
+                return false; // Allow the form submission
+            } else {
+                alert("Invalid username or password. Please try again.");
+                return false; // Prevent the form submission
+            }
+        }
+
+        function forgotPassword() {
+    // Prompt the user for their email or username (you can customize this)
+    const userInput = prompt("Enter your email or username to reset your password:");
+
+    // Check if userInput is not null (user clicked OK) and not empty
+    if (userInput !== null && userInput.trim() !== "") {
+        // Here, you can implement your logic for password reset,
+        // such as sending a password reset email to the user's email address.
+        // You may use an external API or a backend server to handle this process.
+
+        // For the sake of this example, we'll just show an alert.
+        alert("Password reset instructions have been sent to your email.");
+    }
+}
+
+
+
+
+    </script>
+</body>
+
+</html>
